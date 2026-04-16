@@ -5,64 +5,90 @@
   <title>Ramya Ponnuvel Rajathy | Data & AI Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* 1. GLOBAL STYLES & BACKGROUND */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* New updated background color */
-      background: #0b1120; 
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0b1120; /* Deep charcoal/blue background */
       color: #e2e8f0;
       line-height: 1.6;
     }
+
+    /* 2. HEADER & PROFILE IMAGE */
     header {
-      padding: 100px 20px;
+      padding: 80px 20px;
       text-align: center;
       background: radial-gradient(circle at top, #1e293b 0%, #0b1120 100%);
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #f8fafc;
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #22c55e;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
     }
-    h2 {
-      font-weight: 600;
-      color: #22c55e; /* Green accent for section titles */
-      margin-top: 0;
-    }
-    p {
-      max-width: 800px;
-      margin: auto;
-      color: #94a3b8;
-    }
+    h1 { font-size: 3rem; margin-bottom: 10px; color: #f8fafc; }
+    h2.subtitle { font-weight: normal; color: #94a3b8; margin-bottom: 20px; }
+
+    /* 3. BUTTONS */
     .btn {
-      margin: 15px;
-      padding: 12px 28px;
+      margin: 10px;
+      padding: 12px 24px;
       background: #22c55e;
       color: #0b1120;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
-      transition: 0.3s ease;
+      transition: 0.3s;
     }
-    .btn:hover {
-      background: #4ade80;
-      transform: translateY(-2px);
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #22c55e;
+      color: #22c55e;
     }
-    /* Fixed Section Layout */
+    .btn:hover { transform: translateY(-3px); background: #4ade80; }
+
+    /* 4. SECTION LAYOUT (FULL WIDTH BOXES) */
+    .container { padding: 0 20px; }
     section {
       background: #1e293b;
-      padding: 40px;
+      padding: 50px 40px;
       border-radius: 24px;
-      margin: 20px auto; /* Centers the box */
-      max-width: 1000px; /* Limits width for readability */
+      margin: 30px auto;
+      max-width: 1000px;
       border: 1px solid #334155;
-      display: block; /* Ensures it spans the width */
+      display: block;
     }
+    section h2 { color: #22c55e; border-left: 4px solid #22c55e; padding-left: 15px; margin-bottom: 25px; }
+
+    /* 5. SKILL PILLS & LOGOS */
+    .skill-container { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-pill {
+      background: #334155;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      border: 1px solid #475569;
+      color: #cbd5e1;
+    }
+    .logo-grid {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      filter: grayscale(100%) brightness(1.5);
+      opacity: 0.6;
+      margin-top: 20px;
+    }
+
+    /* 6. PROJECT CARDS */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      margin-top: 20px;
     }
     .card {
       background: #0f172a;
@@ -71,57 +97,65 @@
       border: 1px solid #334155;
       transition: 0.3s;
     }
-    .card:hover {
-      border-color: #22c55e;
-      transform: translateY(-5px);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #f8fafc;
-    }
-    .experience-block {
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #334155;
-    }
-    .experience-block:last-child {
-      border-bottom: none;
-    }
-    footer {
-      text-align: center;
-      padding: 60px 20px;
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #22c55e;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    .card:hover { border-color: #22c55e; transform: translateY(-5px); }
+    .card a { color: #22c55e; text-decoration: none; font-weight: bold; }
+
+    /* 7. EXPERIENCE LIST */
+    .exp-item { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #334155; }
+    .exp-item:last-child { border-bottom: none; }
+
+    footer { text-align: center; padding: 60px; color: #64748b; font-size: 0.9rem; }
   </style>
 </head>
 
 <body>
 
 <header>
+  <img src="https://avatars.githubusercontent.com/u/42068046?s=400&u=4825f4be7f4674d59b13d575be7589b9ac1ec503&v=4" 
+       alt="Ramya Ponnuvel Rajathy" class="profile-img">
+  
   <h1>Ramya Ponnuvel Rajathy</h1>
-  <h2>Senior Data Analyst | AI-Driven Analytics & Automation</h2>
-  <p>Ex-Accenture (Google & Cisco) • 9+ Years Experience • Specialized in Agentic AI & SQL Automation </p>
-  <p>I build intelligent data systems that move beyond dashboards into decision engines. </p>
-  <a href="#projects" class="btn">View Projects</a>
-  <a href="https://www.linkedin.com/in/ramya-ponnuvel/" target="_blank" class="btn" style="background:transparent; border: 1px solid #22c55e; color: #22c55e;">LinkedIn</a>
+  <h2 class="subtitle">Senior Data Analyst | AI & BI Automation Specialist</h2>
+  <p>9+ Years Experience • Ex-Google & Cisco • Tableau Certified</p>
+  
+  <div style="margin-top: 25px;">
+    <a href="#projects" class="btn">View Portfolio</a>
+    <a href="https://www.linkedin.com/in/ramya-ponnuvel/" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+  </div>
 </header>
 
-<div style="padding: 0 20px;">
+<div class="container">
+  
+  <section id="logos" style="background: transparent; border: none; text-align: center; padding: 20px;">
+    <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; margin-bottom: 20px; color: #64748b;">Technical Experience At</p>
+    <div class="logo-grid">
+      <span style="font-size: 1.4rem; font-weight: bold;">GOOGLE</span>
+      <span style="font-size: 1.4rem; font-weight: bold;">CISCO</span>
+      <span style="font-size: 1.4rem; font-weight: bold;">ACCENTURE</span>
+      <span style="font-size: 1.4rem; font-weight: bold;">COGNIZANT</span>
+    </div>
+  </section>
+
   <section id="about">
     <h2>About Me</h2>
     <p>
-      Senior Data Analyst with 9+ years of experience driving data-informed decision-making across large-scale technology organizations, including Google and Cisco. 
-      Proven track record of building automated data pipelines, optimizing analytics workflows, and delivering executive-level insights that influence product, finance, and revenue strategy.
-      Strong expertise in SQL, Python, and BI platforms, with a growing focus on AI-driven analytics, agentic workflows, and automation.
+      Senior Data Analyst with a 9-year track record of architecting intelligent data systems for global tech leaders. 
+      I specialize in bridging the gap between raw telemetry data and executive strategy using SQL, Python, and Agentic AI. 
+      My focus is on automating the "boring" parts of data analysis so organizations can move faster toward actionable insights.
     </p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Stack</h2>
+    <div class="skill-container">
+      <span class="skill-pill">SQL (BigQuery, PostgreSQL, SAP HANA)</span>
+      <span class="skill-pill">Python (Pandas, NumPy, Scikit-learn)</span>
+      <span class="skill-pill">Tableau Certified Data Analyst</span>
+      <span class="skill-pill">Looker Studio / Google PLX</span>
+      <span class="skill-pill">Agentic AI (Gemini, Claude)</span>
+      <span class="skill-pill">ETL (Informatica PowerCenter)</span>
+      <span class="skill-pill">A/B Testing & Statistics</span>
+    </div>
   </section>
 
   <section id="projects">
@@ -129,67 +163,111 @@
     <div class="projects">
       <div class="card">
         <h3>Agentic AI EDA System</h3>
-        <p>Architected autonomous data agents for exploratory data analysis (EDA), reducing manual analysis cycles by 80%.</p>
-        <p><strong>Stack:</strong> Python, Pandas, LLM </p>
-        <a href="https://github.com/Ramya-PR/Python_projects/tree/master/gemini_data_cli" target="_blank">View on GitHub →</a>
+        <p>Built autonomous agents that perform deep-dive exploratory data analysis, reducing manual reporting time by 80%.</p>
+        <a href="https://github.com/Ramya-PR/Python_projects/tree/master/gemini_data_cli" target="_blank">View Project →</a>
       </div>
-
       <div class="card">
         <h3>AI Analytics Workflow</h3>
-        <p>Designed agentic AI workflows using LLMs (Gemini) to automate complex data analysis and insight generation. </p>
-        <p><strong>Stack:</strong> SQL, LLM, Automation </p>
-        <a href="https://github.com/Ramya-PR/Python_projects/tree/master/customer%20shopping%20trends" target="_blank">View on GitHub →</a>
+        <p>Automated complex customer shopping trend analysis using LLMs for semantic matching and insight generation.</p>
+        <a href="https://github.com/Ramya-PR/Python_projects/tree/master/customer%20shopping%20trends" target="_blank">View Project →</a>
       </div>
-
       <div class="card">
-        <h3>Churn Prediction Model</h3>
-        <p>Developed predictive ML models (Random Forest) to identify customer churn risk drivers. </p>
-        <p><strong>Stack:</strong> Python, Random Forest, Logistic Regression </p>
-        <a href="https://github.com/Ramya-PR" target="_blank">View Repo →</a>
+        <h3>Predictive Churn Model</h3>
+        <p>Leveraged Random Forest and Logistic Regression to identify key indicators for customer retention at scale.</p>
+        <a href="https://github.com/Ramya-PR" target="_blank">View Repository →</a>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Core Skills</h2>
-    <p><strong>Analytics:</strong> SQL (BigQuery, PostgreSQL), Python (Pandas, Numpy), A/B Testing, Predictive Modeling </p>
-    <p><strong>Business Intelligence:</strong> Tableau (Certified Analyst), Looker Studio, Google PLX </p>
-    <p><strong>AI & Data:</strong> LLMs (Gemini, Claude), Agentic AI, ETL (Informatica), Data Modeling </p>
+  <section id="viz">
+    <h2>Interactive Insights</h2>
+    <p style="margin-bottom: 25px;">Proof of skill: Exploring Retail Store Profit and Sales metrics through interactive BI architecture.</p>
+    
+    <div style="background: #0f172a; border-radius: 16px; padding: 15px; border: 1px solid #334155;">
+      <div class='tableauPlaceholder' id='viz1776367510543' style='position: relative; margin: auto;'>
+        <noscript>
+          <a href='#'>
+            <img alt='Retail Store Profit and Sales ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3_&#47;3_5_top_n-start_17652362458000&#47;RetailStoreProfitandSales&#47;1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+          <param name='embed_code_version' value='3' /> 
+          <param name='site_root' value='' />
+          <param name='name' value='3_5_top_n-start_17652362458000&#47;RetailStoreProfitandSales' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3_&#47;3_5_top_n-start_17652362458000&#47;RetailStoreProfitandSales&#47;1.png' /> 
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-GB' />
+        </object>
+      </div>
+    </div>
+
+    <script type='text/javascript'>
+      var divElement = document.getElementById('viz1776367510543');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      if (divElement.offsetWidth > 800) { 
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+      } else if (divElement.offsetWidth > 500) { 
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+      } else { 
+        vizElement.style.width='100%';
+        vizElement.style.height='1577px';
+      }
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
   </section>
 
   <section id="experience">
     <h2>Experience Highlights</h2>
-    
-    <div class="experience-block">
+    <div class="exp-item">
       <h3>Google (via Accenture)</h3>
-      <p><em>Senior Data Analyst | 2022 – 2025 </em></p>
-      <ul>
-        <li>Architected a centralized marketing intelligence platform across 10+ product areas. </li>
-        <li>Reduced manual data discovery time by 80% via pipeline optimization. </li>
-        <li>Built real-time Android Security dashboards using BigQuery and SQL. </li>
-      </ul>
+      <p><em>Senior Data Analyst</em></p>
+      <p>Architected marketing intelligence platforms for 10+ product areas. Optimized BigQuery pipelines to reduce manual analysis effort by 80%.</p>
     </div>
-
-    <div class="experience-block">
+    <div class="exp-item">
       <h3>Cisco (via Accenture)</h3>
-      <p><em>Data Analyst Lead | 2019 – 2022 </em></p>
-      <ul>
-        <li>Led team of 5 analysts to resolve 500+ complex data issues (4.85/5 CSAT). </li>
-        <li>Automated daily reporting workflows using Python, saving 1–2 hours daily. </li>
-      </ul>
+      <p><em>Data Analyst Lead</em></p>
+      <p>Led a team of 5 to resolve 500+ data issues. Automated daily renewal reporting via Python, saving 2 hours of manual work daily.</p>
     </div>
   </section>
 
-  <section>
-    <h2>Contact & Social</h2>
-    <p>Email: <a href="mailto:ramya.ponnuvelrajathy@gmail.com">ramya.ponnuvelrajathy@gmail.com </a></p>
-    <p>GitHub: <a href="https://github.com/Ramya-PR" target="_blank">github.com/Ramya-PR </a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/ramya-ponnuvel" target="_blank">linkedin.com/in/ramya-ponnuvel </a></p>
+<section id="thoughts">
+    <h2>Data & AI Thoughts</h2>
+    <div class="card" style="background: transparent; border-color: #22c55e;">
+      <h3>From Dashboards to Decision Engines</h3>
+      <p>I believe the future of BI isn't just "seeing" data, but building AI agents that recommend actions based on that data. Check out my latest technical breakdown on Agentic AI and its impact on the data lifecycle.</p>
+      
+      <a href="https://www.linkedin.com/posts/ramya-ponnuvel_ai-agenticai-generativeai-activity-7430761073437220864-ZwnQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAetzmEBQjaukwBinVVuSxQyTF0C6ePucuM" 
+         target="_blank" 
+         style="color:#22c55e; font-weight:bold; text-decoration:none;">
+         Read the Post on LinkedIn →
+      </a>
+    </div>
   </section>
+
+  <section id="contact">
+    <h2>Connect</h2>
+    <p>Ready to discuss how Data and AI can transform your business workflows?</p>
+    <p style="margin-top: 20px;">
+      Email: <a href="mailto:ramya.ponnuvelrajathy@gmail.com" style="color:#22c55e;">ramya.ponnuvelrajathy@gmail.com</a><br>
+      Location: San Jose, CA
+    </p>
+  </section>
+
 </div>
 
 <footer>
-  <p>© 2026 Ramya Ponnuvel Rajathy | Built with Data & AI in mind.</p>
+  <p>© 2026 Ramya Ponnuvel Rajathy | Senior Data Analyst | San Jose, CA</p>
 </footer>
 
 </body>
